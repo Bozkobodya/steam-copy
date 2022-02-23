@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { GamesComponent } from './pages/games/games.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { FriendsComponent } from './pages/friends/friends.component';
+import { LibraryCardComponent } from './shared/library-card/library-card.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,11 +17,15 @@ import { LibraryComponent } from './pages/library/library.component';
     AppComponent,
     HeaderComponent,
     GamesComponent,
-    LibraryComponent
+    LibraryComponent,
+    ProfileComponent,
+    FriendsComponent,
+    LibraryCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

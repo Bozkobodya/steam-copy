@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="friends">
+  <div class="friends__wrap">
+    <div class="friends__heading">Friends</div>
+    <div class="friends__heading-mini">Search Friends</div>
+    <div class="friends__input-wrap">
+      <input type="text" class="friends__input" placeholder="Search Friends" value="{{ inputValue }}" (keyup)="valuechange($event)"/>
+      <button class="friends__input-button" (click)="search()" [disabled]="!inputValue">Search</button>
+    </div>
+    <div class="friends__heading">My Friends</div>
+
+
+
+  </div>
+</div>

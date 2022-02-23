@@ -1,0 +1,23 @@
+.header{
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &__logo{
+    margin: 0 20px;
+  }
+
+  &__item{
+    margin-right: 20px;
+    color: black;
+    font-size: 20px;
+    line-height: 23px;
+
+    &--active{
+      color: #6C69FF;
+    }
+  }
+}
