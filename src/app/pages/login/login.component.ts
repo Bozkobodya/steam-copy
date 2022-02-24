@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
     this.user = this.store.select('userFriends')
   }
 
+  password: string = ''
+
   ngOnInit(): void {
   }
 
@@ -26,6 +28,10 @@ export class LoginComponent implements OnInit {
     this.store.dispatch(changeEmail({ email: form.value.email }))
     this.auth.logIn()
     this.router.navigate(['/games'])
+  }
+
+  console(e: any){
+    console.log(e)
   }
 
 }

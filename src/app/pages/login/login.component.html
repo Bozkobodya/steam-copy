@@ -6,7 +6,7 @@
     <input email required type="email" class="login__input" placeholder="Email" name="email" ngModel="{{(user | async)?.email}}">
 
     <label class="login__label">Password</label>
-    <input required type="password" class="login__input" placeholder="Password">
+    <input required type="password" class="login__input" placeholder="Password" name="password" [ngModel]="password">
 
     <button class="login__button" [disabled]="!form.valid">Sign In</button>
 
