@@ -1,0 +1,176 @@
+.games{
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 20px 60px;
+
+  &__wrap{
+    padding: 60px 100px;
+  }
+
+  &__heading{
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    text-align: start;
+
+    &--mini{
+      font-size: 14px;
+      line-height: 16px;
+      padding: 4px 2px;
+    }
+  }
+
+  &__input{
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    height: 32px;
+    padding: 0 8px;
+
+    &--wrap{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__button{
+      width: 75px;
+      height: 32px;
+      background: #6C69FF;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      color: white;
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 10px;
+    }
+  }
+
+  &__container{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__aside{
+    width: 213px;
+    border-left: 1px solid black;
+    padding: 10px;
+
+    &__heading{
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 28px;
+    }
+
+    //&__range{
+    //  &::-webkit-slider-runnable-track{
+    //    background: #6C69FF;
+    //    height: 4px;
+    //    border-radius: 50px;
+    //  }
+    //
+    //  &::-webkit-slider-thumb{
+    //    border-radius: 50%;
+    //    width: 16px;
+    //    height: 16px;
+    //    border: 1px solid black;
+    //    background: white;
+    //  }
+    //}
+
+    &__price{
+      margin-bottom: 28px;
+      width: 130px;
+      text-align: center;
+    }
+  }
+
+  &__custom-radio{
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inside{
+      width: 10px;
+      height: 10px;
+      background: #6C69FF;
+    }
+
+    &__text{
+      margin-left: 8px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__container{
+      display: flex;
+      align-items: center;
+      margin-left: 18px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__card{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    width: 272px;
+    margin: 10px;
+
+    &__heading{
+      width: 100%;
+      height: 150px;
+      position: relative;
+      background: #BDBCFF;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+    }
+
+    &__name{
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+    &__price{
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+    }
+
+    &__bot{
+      padding: 16px;
+      font-size: 13px;
+      line-height: 15px;
+      color: #000000;
+    }
+
+    &__button{
+      background: #6C69FF;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      width: 100%;
+      height: 32px;
+      margin-top: 16px;
+      color: white;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

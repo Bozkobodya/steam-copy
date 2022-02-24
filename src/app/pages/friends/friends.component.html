@@ -9,6 +9,20 @@
     </div>
     <div class="friends__heading">My Friends</div>
 
+    <div *ngIf="!searchMode; else searchStatus">
+      <div class="friends__item" *ngFor="let name of (user | async)?.friends">
+        {{name}}
+        <button class="friends__item__remove" (click)="removeFriend(name)">Remove Friend</button>
+      </div>
+    </div>
+
+    <ng-template #searchStatus>
+      <div class="friends__item" *ngFor="let name of friendsList">
+        {{name}}
+        <button class="friends__item__add" (click)="addFriend(name)">Add Friend</button>
+      </div>
+    </ng-template>
+
 
 
   </div>

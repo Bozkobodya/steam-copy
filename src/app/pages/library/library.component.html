@@ -3,9 +3,7 @@
   <div class="library__wrap">
     <div class="library__heading">My Games</div>
     <div class="library__container">
-      <app-library-card></app-library-card>
-      <app-library-card></app-library-card>
-      <app-library-card></app-library-card>
+      <app-library-card *ngFor="let game of (user | async)?.games" [gameItem]="game"></app-library-card>
     </div>
   </div>
 </div>

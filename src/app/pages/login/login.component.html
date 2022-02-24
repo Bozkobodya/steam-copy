@@ -1,0 +1,14 @@
+<div class="login__wrap">
+  <form (ngSubmit)="submitForm(form)" class="login" #form="ngForm">
+    <div class="login__heading">Sign In</div>
+
+    <label class="login__label">Email</label>
+    <input email required type="email" class="login__input" placeholder="Email" name="email" ngModel="{{(user | async)?.email}}">
+
+    <label class="login__label">Password</label>
+    <input required type="password" class="login__input" placeholder="Password">
+
+    <button class="login__button" [disabled]="!form.valid">Sign In</button>
+
+  </form>
+</div>

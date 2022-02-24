@@ -1,5 +1,58 @@
 <app-header></app-header>
 
-<p>games works!</p>
+<div class="games__wrap">
+  <div class="games">
+    <div class="games__heading">Games</div>
+    <div class="games__heading--mini">Search Games</div>
+    <div class="games__input--wrap">
+      <input type="text" class="games__input" placeholder="Search Games" (keyup)="changeInputValue($event)">
+      <button class="games__input__button" (click)="search()">Search</button>
+    </div>
+    <div class="games__heading">Featured Games</div>
+    <div class="games__container">
+        <div class="games__cards">
 
-<a routerLink="/library">Go to library</a>
+
+
+
+          <div class="games__card" *ngFor="let game of arrOfGames">
+            <div class="games__card__heading">
+              <div class="games__card__name">{{game.name}}</div>
+              <div class="games__card__price">{{game.price}} UAH</div>
+            </div>
+            <div class="games__card__bot">
+              {{game.desc}}
+              <button class="games__card__button" (click)="addGameToLibrary(game)">Add to Library</button>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="games__aside">
+          <div class="games__aside__heading">Filter by price</div>
+          <input type="range" class="games__aside__range" min="{{minPrice}}" max="{{maxPrice}}" (change)="changeRangeValue($event)">
+          <div class="games__aside__price">{{+rangeValue === +maxPrice ? 'Any Price' : rangeValue}}</div>
+          <div class="games__aside__heading">Filter by tag</div>
+          <div class="games__custom-radio__container" (click)="changeIndie()">
+            <div class="games__custom-radio">
+              <div *ngIf="searchIndie" class="games__custom-radio__inside"></div>
+            </div>
+            <div class="games__custom-radio__text">Indie</div>
+          </div>
+          <div class="games__custom-radio__container" (click)="changeAction()">
+            <div class="games__custom-radio">
+              <div *ngIf="searchAction" class="games__custom-radio__inside"></div>
+            </div>
+            <div class="games__custom-radio__text">Action</div>
+          </div>
+          <div class="games__custom-radio__container" (click)="changeAdventure()">
+            <div class="games__custom-radio">
+              <div *ngIf="searchAdventure" class="games__custom-radio__inside"></div>
+            </div>
+            <div class="games__custom-radio__text">Adventure</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

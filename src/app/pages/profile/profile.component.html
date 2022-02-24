@@ -1,18 +1,18 @@
 <app-header></app-header>
 
 <div class="profile__wrap">
-  <form class="profile">
+  <form (ngSubmit)="submitForm(form)" class="profile" #form="ngForm">
     <span class="profile__heading">Profile</span>
 
     <label class="profile__label">Username</label>
-    <input type="text" placeholder="Username" class="profile__input">
+    <input type="text" placeholder="Username" class="profile__input" name="username" ngModel="{{(user | async)?.username}}">
 
     <label class="profile__label">Email</label>
-    <input type="text" placeholder="Email" class="profile__input">
+    <input email type="email" placeholder="Email" class="profile__input" name="email" ngModel="{{(user | async)?.email}}">
 
     <label class="profile__label">Age</label>
-    <input type="text" placeholder="Age" class="profile__input">
+    <input type="text" placeholder="Age" class="profile__input" name="age" ngModel="{{(user | async)?.age}}">
 
-    <button class="profile__button" type="submit">Save</button>
+    <button class="profile__button" type="submit" [disabled]="!form.valid || !checkForNumberContains(form.value.age)">Save</button>
   </form>
 </div>
